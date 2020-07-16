@@ -16,7 +16,7 @@ import model.Skill;
 public class PlayerDAO {
 	
 	static List<Player> sportspersons= new ArrayList<Player>(); 
-	final String SELECT_ALL_SKILLS = "Select SKILL1.ID,SKILL1.NAME, PLAYER.NAME from SKILL1 INNER JOIN PLAYER ON SKILL1.ID=PLAYER.SKILL_ID";
+	final String SELECT_ALL_SKILLS = "Select SKILL1.ID,SKILL1.NAME, PLAYER.NAME from SKILL1 OUTER JOIN PLAYER ON SKILL1.ID=PLAYER.SKILL_ID";
 
 	public List< Player > getAllPlayers() throws SQLException, Exception {
 		Player play = new Player(0, SELECT_ALL_SKILLS, SELECT_ALL_SKILLS, null);
